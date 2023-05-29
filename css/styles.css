@@ -1,0 +1,258 @@
+/* Importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@300;400;600;700&display=swap');
+
+/* CSS Reset */
+* {
+    font-family: "Poppings", san-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* to remove default focus style */
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    /* to apply transition time for all prop changes */
+    transition: all .2s;
+}
+
+/* Variables declaration */
+:root {
+    --ORANGE: #E39774;
+    --TEXT-COLOR-1: #326273;
+    --TEXT-COLOR-2: #5C9EAD;
+    --BG-COLOR-1: #FFF;
+    --BG-COLOR-2: #EEE;
+    --BOX-SHADOW: 0 0.5rem 1.5rem #267896;
+}
+
+/* Global styles */
+html {
+    /* 100% -> 16px; 62.5% -> 10px
+    Now, 1rem = 10px */
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+
+html::-webkit--scrollbar {
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--ORANGE);
+}
+
+
+body {
+    background-color: var(--BG-COLOR-2);
+}
+
+/* Utility styles */
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--ORANGE);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: 0.2rem;
+}
+
+/* Generel styles */
+.header {
+    position: fixed;
+    top: 0;
+    /* left: 0;
+    right: 0; */
+    width: 100%;
+    background-color: var(--BG-COLOR-1);
+    box-shadow: var(--BOX-SHADOW);
+    padding: 1.5rem 7%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+/* logo name */
+.header .logo {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: var(--TEXT-COLOR-2);
+}
+
+/* logo icon */
+.header .logo i {
+    color: var(--ORANGE);
+}
+
+/* form with search bar */
+.header .search-form {
+    background-color: var(--BG-COLOR-2);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
+    width: 50rem;
+}
+
+/* input field (search bar) */
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    /* to remove default bg color of input field
+    none works only with background */
+    background: none;
+    text-transform: none;
+    font-size: 1.5rem;
+    color: var(--TEXT-COLOR-1);
+    padding: 1rem;
+}
+
+/* search bar's label (icon) */
+.header .search-form label {
+    font-size: 2rem;
+    margin-right: 1.5rem; 
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--ORANGE);
+}
+
+/* each icons in header */
+.header .icons div {
+    /* icon's container size  */
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    /* actual icons size */
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    background-color: var(--BG-COLOR-2);
+    color: var(--TEXT-COLOR-1);
+    cursor: pointer;
+    /* to align icons inside div center */
+    text-align: center;
+}
+
+.header .icons div:hover {
+    color: #fff;
+    background-color: var(--ORANGE);
+}
+
+/* not displaying the search button */
+#search-btn {
+    display: none;
+}
+
+.header .navbar {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background-color: var(--BG-COLOR-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--BOX-SHADOW);
+    width: 25rem;
+    /* to hide the navbar */
+    transform: scale(0);
+    /* to move the transformed element (position)
+    It will present at top right  */
+    transform-origin: top right;
+}
+
+/* when it's active */
+.header .navbar.active, .header .login-form.active {
+    transform: scale(1);
+    /* transform-origin: none; */
+}
+
+.header .navbar a {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--TEXT-COLOR-1);
+}
+
+.header .navbar a:hover {
+    color: var(--ORANGE);
+    background-color: var(--BG-COLOR-2);
+    /* to make it go inside smoothly */
+    padding-left: 2rem;
+}
+
+.header .login-form {
+    /* same styles as nav bar */
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background-color: var(--BG-COLOR-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--BOX-SHADOW);
+    width: 35rem;
+    padding: 2rem;
+    /* to hide this */
+    transform: scale(0);
+    /* to move the transformed element (position)
+    It will present at top right  */
+    transform-origin: top right;
+}
+
+/* login input containers */
+.header .login-form .inputBox {
+    margin-bottom: 1rem;
+}
+
+/* login field names */
+.header .login-form .inputBox span {
+    font-size: 1.7rem;
+    color: var(--TEXT-COLOR-2);
+}
+
+/* login input fields */
+.header .login-form .inputBox input {
+    font-size: 1.7rem;
+    color: var(--TEXT-COLOR-1);
+    border-radius: 0.5rem;
+    /* adding padding makes it as block element */
+    padding: 1rem;
+    background-color: var(--BG-COLOR-2);
+    width: 100%;
+    /* to remove global text prop for input field */
+    text-transform: none;
+    margin: 0.5rem 0;
+}
+
+/* remeber container */
+.header .login-form .remember {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+/* remember's label */
+.header .login-form .remember label {
+    color: var(--TEXT-COLOR-2);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* button in login */
+.header .login-form .btn {
+    width: 100%;
+}
