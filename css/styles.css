@@ -52,6 +52,20 @@ html::-webkit-scrollbar-thumb {
 
 body {
     background-color: var(--BG-COLOR-2);
+    height: 200vh;
+}
+
+/* Dark mode */
+body.active {
+    --TEXT-COLOR-1: #fff;
+    --TEXT-COLOR-2: #eee;
+    --BG-COLOR-1: #333;
+    --BG-COLOR-2: #222;
+    --BOX-SHADOW: 0 0.5rem 1.5rem aqua;
+}
+
+section {
+    padding: 2rem 7%;
 }
 
 /* Utility styles */
@@ -255,4 +269,118 @@ body {
 /* button in login */
 .header .login-form .btn {
     width: 100%;
+}
+
+/* Home section styles */
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 7rem;
+}
+
+/* image container */
+.home .image {
+    /* flex: flex-grow flex-shrink flex-basis; */
+    flex: 1 1 45rem;
+}
+
+.home .image img {
+    width: 100%
+}
+
+.home .content {
+    flex: 1 1 45rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+
+/* For screens like tablet */
+@media screen and (max-width: 991px) {
+    
+    /* reducing font-size */
+    html {
+        /* 55% of parent's font-size (55% of 1rem (16px) */
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .header .navbar {
+        right: 2rem;
+    }
+    
+    .header .login-form {
+        right: 2rem;
+    }
+
+    /* making the search btn appear for toggling search form */
+    #search-btn {
+        display: inline-block;
+    }
+    /* make the seach form appear below the header */
+    .header .search-form {
+        /* header is the positioned anscestor */
+        position: absolute;
+        top: 115%;
+        right: 2.5rem;
+        width: 90%;
+        border-radius: 0.5rem;
+        --BOX-SHADOW: 0 0.5rem 1.5rem var(--ORANGE);
+        box-shadow: var(--BOX-SHADOW);
+        background-color: var(--BG-COLOR-1);
+        /* display: none; */
+        transform: scale(0);
+        /* shrinks or minimized in top right of the box */
+        transform-origin: top;
+        transition: transform 0.5s;
+    }
+
+    /* for dark mode */
+    body.active .header .search-form {
+        --BOX-SHADOW: 0 0.5rem 1.5rem #e10361;
+    }
+
+    /* enabling search form after clicking btn */
+    .header .search-form.active {
+        /* initial value is flex */
+        /* display: flex; */
+        transform: scale(1);
+    }
+
+}
+
+/* For screens like phone */
+@media screen and (max-width: 450px) {
+
+    html {
+        font-size: 50%;
+    }
 }
