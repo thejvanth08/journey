@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- swiperjs cdn for slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <!-- stylesheet link -->
+    <!-- aos cdn -->
+    <!-- cdn link from cdn js is not working, only aos doc link works well -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />    <!-- stylesheet link -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Journey</title>
 </head>
@@ -71,11 +73,11 @@
 
     <section class="home" id="home">
 
-        <div class="image">
+        <div class="image" data-aos="fade-down">
             <img src="assets/hero-img.svg" alt="">
         </div>
 
-        <div class="content">
+        <div class="content" data-aos="fade-up">
             <h3>Adventure is Fun</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quibusdam libero adipisci consectetur ut laudantium quidem, unde perspiciatis, ipsum, dolores tenetur accusantium totam veniam! Reiciendis harum iusto eum fuga laudantium?</p>
             <a href="#" class="btn">explore now</a>
@@ -120,7 +122,7 @@
 
         <div class="box-container">
 
-            <div class="box">
+            <div class="box" data-aos="flip-down">
                 <div class="image">
                     <img src="assets/tamil-nadu.jpg" width="400" height="300" alt="">
                     <h3><i class="fa-solid fa-map-marker-alt"></i> tamil nadu</h3>
@@ -132,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="flip-down">
                 <div class="image">
                     <img src="assets/delhi.jpg" width="400" height="300" alt="">
                     <h3><i class="fa-solid fa-map-marker-alt"></i> new delhi</h3>
@@ -144,7 +146,7 @@
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="flip-down">
                 <div class="image">
                     <img src="assets/west-bengal.jpg" width="400" height="300" alt="">
                     <h3><i class="fa-solid fa-map-marker-alt"></i> west bengal</h3>
@@ -156,7 +158,7 @@
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="flip-down">
                 <div class="image">
                     <img src="assets/odisha.jpg" width="400" height="300" alt="">
                     <h3><i class="fa-solid fa-map-marker-alt"></i> odisha</h3>
@@ -168,7 +170,7 @@
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="flip-down">
                 <div class="image">
                     <img src="assets/kerala.jpg" width="400" height="300" alt="">
                     <h3><i class="fa-solid fa-map-marker-alt"></i> kerala</h3>
@@ -180,7 +182,7 @@
                 </div>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="flip-down">
                 <div class="image">
                     <img src="assets/ladakh.jpg" width="400" height="300" alt="">
                     <h3><i class="fa-solid fa-map-marker-alt"></i> ladakh</h3>
@@ -204,7 +206,7 @@
 
         <div class="box-container">
 
-            <div class="box">
+            <div class="box"  data-aos="zoom-in">
                 <!-- inline -->
                 <span>01</span>
                 <i class="fa-solid fa-hotel"></i>
@@ -213,42 +215,42 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="zoom-in">
                 <span>01</span>
                 <i class="fa-solid fa-hotel"></i>
                 <h3>affordable hotels</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="zoom-in">
                 <span>02</span>
                 <i class="fa-solid fa-plane"></i>
                 <h3>fastest travel</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="zoom-in">
                 <span>03</span>
                 <i class="fa-solid fa-utensils"></i>
                 <h3>food and drinks</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="zoom-in">
                 <span>04</span>
                 <i class="fa-solid fa-globe"></i>
                 <h3>around the world</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="zoom-in">
                 <span>05</span>
                 <i class="fa-solid fa-person-hiking"></i>
                 <h3>new adventures</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="zoom-in">
                 <span>06</span>
                 <i class="fa-solid fa-bullhorn"></i>
                 <h3>safety guide</h3>
@@ -269,7 +271,7 @@
 
         <div class="box-container">
 
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up">
                 <h3>basic plan</h3>
                 <div class="price">
                     <span>$</span>
@@ -286,7 +288,7 @@
                 <a href="#" class="btn">choose plan</a>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up">
                 <h3>standard plan</h3>
                 <div class="price">
                     <span>$</span>
@@ -303,7 +305,7 @@
                 <a href="#" class="btn">choose plan</a>
             </div>
 
-            <div class="box">
+            <div class="box" data-aos="zoom-in-up">
                 <h3>premium plan</h3>
                 <div class="price">
                     <span>$</span>
@@ -472,12 +474,53 @@
 
     <!-- blog section ends -->
 
+    <!-- footer section starts -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>our branches</h3>
+                <a href="#"><i class="fa-solid fa-map-marker-alt"></i> chennai</a>
+                <a href="#"><i class="fa-solid fa-map-marker-alt"></i> bangalore</a>
+                <a href="#"><i class="fa-solid fa-map-marker-alt"></i> delhi</a>
+                <a href="#"><i class="fa-solid fa-map-marker-alt"></i> kolkata</a>
+                <a href="#"><i class="fa-solid fa-map-marker-alt"></i> kerala</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fa-solid fa-chevron-right"></i> home</a>
+                <a href="#packages"><i class="fa-solid fa-chevron-right"></i> packages</a>
+                <a href="#services"><i class="fa-solid fa-chevron-right"></i> services</a>
+                <a href="#pricing"><i class="fa-solid fa-chevron-right"></i> pricing</a>
+                <a href="#contact"><i class="fa-solid fa-chevron-right"></i> contact</a>
+                <a href="#blogs"><i class="fa-solid fa-chevron-right"></i> blogs</a>
+            </div>
+            
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fa-solid fa-phone"></i> +123-456-789</a>
+                <a href="#"><i class="fa-solid fa-phone"></i> +123-456-789</a>
+                <a class="email" href="mailto:thejvanth08@gmail.com"><i class="fa-solid fa-envelope"></i> thejvanth08@gmail.com</a>
+                <a href="#"><i class="fa-solid fa-map-marker-alt"></i> chennai, india</a>
+            </div>
+
+        </div>
+
+        <div class="credit">created by <span id="creator">thejvanth</span> | all rights reserved</div>
+    </section>
+
+    <!-- footer section ends -->
 
 
-
-    <!-- swiperjs cdn for script -->
+    <!-- swiperjs cdn script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+    <!-- aos cdn script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
     <!-- script link -->
     <script src="js/script.js"></script>
 </body>

@@ -88,7 +88,8 @@ section {
 
 .heading {
     text-align: center;
-    padding-bottom: 2rem;
+    margin-top: 7.5rem;
+    padding-bottom: 5rem;
     color: var(--TEXT-COLOR-1);
     font-size: 4rem;
 }
@@ -743,6 +744,72 @@ input::-webkit-inner-spin-button {
 .blogs .box-container .box .content .icons i {
     color: var(--ORANGE);
 }
+
+/* Footer styles */
+.footer {
+    margin-top: 8rem;
+    background-color: var(--BG-COLOR-1);
+}
+
+.footer .box-container {
+    display: grid;
+    /* responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    /* to make it appear center */
+    margin-left: 8rem;
+}
+
+/* headings */
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--TEXT-COLOR-1);
+    padding: 1rem 0;
+}
+
+/* all links in footer */
+.footer .box-container .box a {
+    /* inline to block */
+    display: block;
+    font-size: 1.5rem;
+    color: var(--TEXT-COLOR-2);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i {
+    /* to give space after icon */
+    padding-right: 0.5rem;
+    color: var(--ORANGE);
+}
+
+.footer .box-container .box a:hover i {
+    /* push the text right */
+    padding-right: 2rem;
+} 
+
+.footer .credit {
+    font-size: 2rem;
+    text-align: center;
+    border-top: .1rem solid var(--TEXT-COLOR-2);
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    color: var(--TEXT-COLOR-2);
+}
+
+#creator {
+    color: var(--ORANGE);
+}
+
+body.active #creator {
+    color: aqua;
+}
+
+
+
+
+
+
 /* Media queries */
 
 /* For screens like tablet */
@@ -835,5 +902,26 @@ input::-webkit-inner-spin-button {
 
     .contact form .inputBox input {
         width: 100%;
+    }
+
+    .footer .box {
+        /* text-align: center; */
+        margin: 0 auto;
+    }
+
+    .footer .box a {
+        margin-left: 4rem;
+    }
+
+    .footer .box h3 {
+        text-align: center;
+    }
+    /* no need to display quick links in footer  */
+    .footer .box:nth-child(2){
+        display: none;
+    }
+
+    .footer .box .email {
+        text-transform: none;
     }
 }
