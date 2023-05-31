@@ -18,7 +18,7 @@
 
 /* Variables declaration */
 :root {
-    --ORANGE: #E39774;
+    --ORANGE: #ffa52c;
     --TEXT-COLOR-1: #326273;
     --TEXT-COLOR-2: #5C9EAD;
     --BG-COLOR-1: #FFF;
@@ -82,6 +82,20 @@ section {
 
 .btn:hover {
     letter-spacing: 0.2rem;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: var(--TEXT-COLOR-1);
+    font-size: 4rem;
+}
+
+.heading span {
+    /* position: relative;
+    z-index: 0; */
+    text-decoration: underline;
+    text-decoration-color: var(--ORANGE);
 }
 
 /* Generel styles */
@@ -283,6 +297,7 @@ section {
 
 /* image container */
 .home .image {
+    margin-top: 4rem;
     /* flex: flex-grow flex-shrink flex-basis; */
     flex: 1 1 45rem;
 }
@@ -295,21 +310,155 @@ section {
     flex: 1 1 45rem;
 }
 
+.home .content h3 {
+    text-transform: none;
+    color: var(--TEXT-COLOR-1);
+    font-size: 4rem;
+    line-height: 1.7;
+    padding: 1rem 0;
+}
 
+.home .content p {
+    color: var(--TEXT-COLOR-2);
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
 
+/* form styles */
 
+/* outer container */
+.form-container form {
+    background-color: var(--BG-COLOR-1);
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
 
+/* inner containers */
+.form-container form .inputBox {
+    flex: 1 1 23rem;
+}
 
+/* input label */
+.form-container form .inputBox span {
+    font-size: 1.7rem;
+    color: var(--TEXT-COLOR-2)
+}
 
+/* input field */
+.form-container form .inputBox input {
+    font-size: 1.5rem;
+    color: var(--TEXT-COLOR-1);
+    background-color: var(--BG-COLOR-2);
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    text-transform: none;
+    width: 100%;
+    padding: 1rem;
+}
 
+.form-container form .btn {
+    flex: 1 1 23rem;
+}
 
+.form-container form input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    width: 1.5rem;
+    padding: 2px;
+}
+/* for changing calendar icon color in dark mode*/
 
+body.active input[type="date"]::-webkit-calendar-picker-indicator {
+    /* display: none; */
+    /* -webkit-appearance: none; */
+    background-color: rgb(192, 186, 186);
+    /* margin-top: 10px; */
+}
 
+/* Packages styles */
 
+/* outer container */
+.packages .box-container {
+    display: grid;
+    /* responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
 
+/* inner cards/boxes (grid items) -> resize */
+.packages .box-container .box {
+    background-color: var(--BG-COLOR-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
 
+/*  image container */
+.packages .box-container .box .image {
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;    
+}
 
+/* image */
+.packages .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    /* maintain aspect radio (width:height), therefore clips image */
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
 
+/* image title (place name) */
+.packages .box-container .box .image h3 {
+    /* related to .image  */
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    font-weight: lighter;
+    padding: 0.5rem 1.5rem;
+}
+
+/* location icon */
+.packages .box-container .box .image h3 i {
+    color: var(--ORANGE);
+}
+
+.packages .box-container .box .content {
+    padding: 1.5rem;
+    padding-top: 0;
+}
+
+/* new price */
+.packages .box-container .box .content .price {
+    font-weight: 600;
+    color: var(--TEXT-COLOR-1);
+    font-size: 2.5rem;
+}
+
+/* old price */
+.packages .box-container .box .content .price span {
+    font-weight: 600;
+    color: var(--TEXT-COLOR-2);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+/* place description */
+.packages .box-container .box .content p {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    color: var(--TEXT-COLOR-2);
+    line-height: 1.7;
+}
 
 
 
@@ -328,7 +477,17 @@ section {
         padding: 1.5rem 2rem;
     }
 
+    section {
+        padding: 1.5rem 2rem;
+    }
+
+    .home .content {
+        text-align: center;
+    }
     
+    .home .content p {
+        padding-bottom: 2rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
