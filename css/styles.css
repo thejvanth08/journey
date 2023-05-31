@@ -904,14 +904,15 @@ body.active #creator {
         width: 100%;
     }
 
-    .footer .box {
-        /* text-align: center; */
-        margin: 0 auto;
-    }
+    .footer .box-container {
+        display: flex;
+        margin-left: -1.5rem;
+        justify-content: space-evenly;
 
-    .footer .box a {
-        margin-left: 4rem;
     }
+    
+
+
 
     .footer .box h3 {
         text-align: center;
