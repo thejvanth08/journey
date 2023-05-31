@@ -49,3 +49,21 @@ themeBtn.onclick = () => {
         document.body.classList.remove("active");
     }
 }
+
+
+// for swiperjs
+var swiper = new Swiper(".mySwiper", {
+    effect: "cube",
+    // to again got first slide
+    loop: true,
+    grabCursor: true,
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+});

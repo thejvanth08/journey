@@ -36,8 +36,8 @@ html {
     scroll-padding-top: 7rem;
 }
 
-
-html::-webkit--scrollbar {
+/* Scrollbar styles */
+html::-webkit-scrollbar {
     width: 0.8rem;
 }
 
@@ -74,6 +74,7 @@ section {
     display: inline-block;
     padding: 0.8rem 3rem;
     font-size: 1.7rem;
+    font-weight: bolder;
     color: #fff;
     background-color: var(--ORANGE);
     border-radius: 0.5rem;
@@ -82,6 +83,7 @@ section {
 
 .btn:hover {
     letter-spacing: 0.2rem;
+
 }
 
 .heading {
@@ -286,13 +288,13 @@ section {
 }
 
 /* Home section styles */
-
 .home {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding-top: 7rem;
+    min-height: 100vh;
 }
 
 /* image container */
@@ -308,6 +310,7 @@ section {
 
 .home .content {
     flex: 1 1 45rem;
+    /* margin-top: -10rem; */
 }
 
 .home .content h3 {
@@ -460,8 +463,286 @@ body.active input[type="date"]::-webkit-calendar-picker-indicator {
     line-height: 1.7;
 }
 
+/* Services styles */
+/* grid container */
+.services .box-container {
+    display: grid;
+    /* responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.services .box-container .box {
+    background-color: var(--BG-COLOR-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--BOX-SHADOW);
+    padding: 2rem;
+    /* relative to span (serial no.)  */
+    position: relative;
+}
+
+.services .box-container .box span {
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
+    color: var(--TEXT-COLOR-2);
+    font-weight: bolder;
+    font-size: 5rem;
+}
+
+/* icons */
+.services .box-container .box i {
+    /*  */
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    background: var(--ORANGE);
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+/* service heading */
+.services .box-container .box h3 {
+    color: var(--TEXT-COLOR-1);
+    font-size: 2.3rem;
+    padding: 0.7rem 0;
+}
+
+/* service description */
+.services .box-container .box p {
+    color: var(--TEXT-COLOR-2);
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+/* Pricing styles */
+/* grid container */
+.pricing .box-container {
+    display: grid;
+    /* responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.pricing .box-container .box {
+    background-color: var(--BG-COLOR-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--BOX-SHADOW);
+    padding: 2rem;
+    text-align: center;
+}
+
+.pricing .box-container .box h3 {
+    padding: 1rem;
+    background-color: var(--BG-COLOR-2);
+    border-radius: 0.5rem;
+    font-size: 2.5rem;
+    color: var(--TEXT-COLOR-1);
+    text-align: center;
+}
 
 
+.pricing .box-container .box .price {
+    padding-top: 2rem;
+}
+
+/* dolor symbol */
+.pricing .box-container .box .price span {
+    font-size: 2rem;
+    color: var(--TEXT-COLOR-2);
+}
+
+.pricing .box-container .box .price .amount {
+    font-size: 5rem;
+    color: var(--TEXT-COLOR-1);
+    font-weight: bolder;
+}
+
+.pricing .box-container .box ul {
+    padding: 0.5rem 0;
+    list-style-type: none;
+}
+
+.pricing .box-container .box ul li {
+    color: var(--TEXT-COLOR-2);
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    /* text-align: center; */
+}
+
+/* Review styles */
+
+.review .review-slider {
+    --BOX-SHADOW: 0 0.5rem 1.5rem #FF69B4;
+    box-shadow: var(--BOX-SHADOW);
+}
+
+/* each slide */
+.review .review-slider .slide {
+    background-color: var(--BG-COLOR-1);
+    border-radius: 0.8rem;
+    text-align: center;
+    padding: 3rem;
+}
+
+/* client image */
+.review .review-slider .slide img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    /* maintain aspect ratio, clip img */
+    object-fit: cover;
+}
+
+/* client name */
+.review .review-slider .slide h3 {
+    font-size: 2.5rem;
+    /* white in dark mode */
+    color: var(--TEXT-COLOR-1);
+    line-height: 1.7;
+    padding: 1.2rem 0;
+}
+
+/* client review description */
+.review .review-slider .slide p {
+    font-size: 1.5rem;
+    color: var(--TEXT-COLOR-2);
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+/* client star icons */
+.review .review-slider .slide .stars i {
+    font-size: 2rem;
+    color: var(--ORANGE);
+}
+
+/* Contact us form styles  */
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    /* main it will center the button */
+    text-align: center;
+}
+
+/* input container (2 nos) */
+.contact form .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* input field, textarea field */
+.contact form textarea,
+.contact form .inputBox input {
+    --BOX-SHADOW: 0 0.3rem 1rem aqua;
+    text-transform: none;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--TEXT-COLOR-1); 
+    margin: 0.9rem 0;
+    background-color: var(--BG-COLOR-1);
+    box-shadow: var(--BOX-SHADOW);
+}
+
+.contact form textarea {
+    height: 20rem;
+    /* to turn off resizing property */
+    resize: none;
+}
+
+/* only for input field */
+.contact form .inputBox input {
+    width: 49%;
+}
+
+/* to remove arrows in number input field */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Blog styles */
+.blogs .box-container {
+    display: grid;
+    /* responsive layout */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* each box or card */
+.blogs .box-container .box {
+    --BOX-SHADOW: 0 0.5rem 1.5rem #FF69B4;
+    background-color: var(--BG-COLOR-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--BOX-SHADOW);
+    padding: 2rem;
+}
+
+/* blog image container */
+.blogs .box-container .box .image {
+    height: 20rem;
+    width: 100%;
+    /* to hide the scaled imaged while hovering */
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: var(--BG-COLOR-2);
+}
+
+/* actual blog image */
+.blogs .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+}
+
+/* during hover */
+.blogs .box-container .box .image img:hover {
+    transform: scale(1.2);
+}
+
+/* content container */
+.blogs .box-container .box .content {
+    padding: 1rem;
+}
+
+.blogs .box-container .box .content h3 {
+    font-size: 2rem;
+    color: var(--TEXT-COLOR-1);
+    line-height: 1.5;
+}
+
+/* blog icons container */
+.blogs .box-container .box .content .icons {
+    display: flex;
+    /* to make contant appear in 2 corners */
+    justify-content: space-between;
+    border-top: 0.1rem solid var(--TEXT-COLOR-2);
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+/* icons + note */
+.blogs .box-container .box .content .icons a {
+    font-size: 1.5rem;
+    color: var(--TEXT-COLOR-2);
+}
+
+.blogs .box-container .box .content .icons a:hover {
+    color: var(--ORANGE);
+}
+
+/* icons only  */
+.blogs .box-container .box .content .icons i {
+    color: var(--ORANGE);
+}
 /* Media queries */
 
 /* For screens like tablet */
@@ -524,7 +805,7 @@ body.active input[type="date"]::-webkit-calendar-picker-indicator {
 
     /* for dark mode */
     body.active .header .search-form {
-        --BOX-SHADOW: 0 0.5rem 1.5rem #e10361;
+        --BOX-SHADOW: 0 0.8rem 2.5rem #e10361;
     }
 
     /* enabling search form after clicking btn */
@@ -541,5 +822,18 @@ body.active input[type="date"]::-webkit-calendar-picker-indicator {
 
     html {
         font-size: 50%;
+    }
+
+    /* to adjust the visible area */
+    .home .image {
+        margin-top: 0;
+    }
+
+    .home .content {
+        margin-top: -10rem;
+    }
+
+    .contact form .inputBox input {
+        width: 100%;
     }
 }

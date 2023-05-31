@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- fontawesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- swiperjs cdn for slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <!-- stylesheet link -->
     <link rel="stylesheet" href="css/styles.css">
     <title>Journey</title>
@@ -112,7 +114,7 @@
     
     <!-- packages section starts -->
     
-    <section class="packages" id="section">
+    <section class="packages" id="packages">
 
         <h1 class="heading">our <span>packages</span></h1>
 
@@ -203,13 +205,278 @@
         <div class="box-container">
 
             <div class="box">
+                <!-- inline -->
                 <span>01</span>
                 <i class="fa-solid fa-hotel"></i>
+                <!-- block -->
+                <h3>affordable hotels</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
+            </div>
+
+            <div class="box">
+                <span>01</span>
+                <i class="fa-solid fa-hotel"></i>
+                <h3>affordable hotels</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
+            </div>
+
+            <div class="box">
+                <span>02</span>
+                <i class="fa-solid fa-plane"></i>
+                <h3>fastest travel</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
+            </div>
+
+            <div class="box">
+                <span>03</span>
+                <i class="fa-solid fa-utensils"></i>
+                <h3>food and drinks</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
+            </div>
+
+            <div class="box">
+                <span>04</span>
+                <i class="fa-solid fa-globe"></i>
+                <h3>around the world</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
+            </div>
+
+            <div class="box">
+                <span>05</span>
+                <i class="fa-solid fa-person-hiking"></i>
+                <h3>new adventures</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
+            </div>
+
+            <div class="box">
+                <span>06</span>
+                <i class="fa-solid fa-bullhorn"></i>
+                <h3>safety guide</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!</p>
             </div>
         </div>
+
+
     </section>
+
     <!-- services section ends -->
 
+    <!-- pricing section starts -->
+
+    <section class="pricing" id="pricing">
+
+        <h1 class="heading">our <span>pricing</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>basic plan</h3>
+                <div class="price">
+                    <span>$</span>
+                    <span class="amount">30</span>
+                    <span>/month</span>
+                </div>
+                <ul>
+                    <li>10 days</li>
+                    <li>food and drinks</li>
+                    <li>safety guide</li>
+                    <li>insurance</li>
+                    <li>luxury hotel</li>
+                </ul>
+                <a href="#" class="btn">choose plan</a>
+            </div>
+
+            <div class="box">
+                <h3>standard plan</h3>
+                <div class="price">
+                    <span>$</span>
+                    <span class="amount">40</span>
+                    <span>/month</span>
+                </div>
+                <ul>
+                    <li>20 days</li>
+                    <li>food and drinks</li>
+                    <li>safety guide</li>
+                    <li>insurance</li>
+                    <li>luxury hotel</li>
+                </ul>
+                <a href="#" class="btn">choose plan</a>
+            </div>
+
+            <div class="box">
+                <h3>premium plan</h3>
+                <div class="price">
+                    <span>$</span>
+                    <span class="amount">50</span>
+                    <span>/month</span>
+                </div>
+                <ul>
+                    <li>30 days</li>
+                    <li>food and drinks</li>
+                    <li>safety guide</li>
+                    <li>insurance</li>
+                    <li>luxury hotel</li>
+                </ul>
+                <a href="#" class="btn">choose plan</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- pricing section ends -->
+
+    <!-- review section starts-->
+
+    <section class="review" id="review">
+
+        <h1 class="heading">client's <span>review</span></h1>
+
+        <!-- carousel/slider container -->
+        <div class="review-slider swiper mySwiper">
+
+            <!-- slider wrapper (like inner container) -->
+            <div class="wrapper swiper-wrapper">
+
+                <div class="slide swiper-slide">
+                    <img src="assets/shasha.png" alt="">
+                    <h3>Shasha</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, minima sed officiis delectus atque distinctio? Consequatur porro quis atque cupiditate.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="slide swiper-slide">
+                    <img src="assets/cooper.png" alt="">
+                    <h3>Cooper</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, minima sed officiis delectus atque distinctio? Consequatur porro quis atque cupiditate.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="slide swiper-slide">
+                    <img src="assets/bhommi.png" alt="">
+                    <h3>Bhommi</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, minima sed officiis delectus atque distinctio? Consequatur porro quis atque cupiditate.</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+    
+            </div>
+
+            <!-- for pagination  -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- contact section starts -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"><span>contact</span> us</h1>
+
+        <form action="">
+
+            <div class="inputBox">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+            </div>
+
+            <div class="inputBox">
+                <input type="number" placeholder="Phone Number">
+                <input type="text" placeholder="Subject">
+            </div>
+            
+            <textarea name="" placeholder="Your message" id="" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="send message" class="btn">
+        </form>
+
+
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- blog section starts -->
+
+    <section class="blogs" id="blogs">
+     
+        <h1 class="heading">our <span>blogs</span></h1>
+    
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/blog-1.svg" alt="">
+                </div>
+                <div class="content">
+                    <h3>explore the world now</h3>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <a href="#"><i class="fa-solid fa-calendar"></i> 1st may, 2023</a>
+                        <a href="#"><i class="fa-solid fa-user"></i> by admin</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/blog-2.svg" alt="">
+                </div>
+                <div class="content">
+                    <h3>discover new places and things</h3>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <a href="#"><i class="fa-solid fa-calendar"></i> 1st may, 2023</a>
+                        <a href="#"><i class="fa-solid fa-user"></i> by admin</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="assets/blog-3.svg" alt="">
+                </div>
+                <div class="content">
+                    <h3>start roaming the earth</h3>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <a href="#"><i class="fa-solid fa-calendar"></i> 1st may, 2023</a>
+                        <a href="#"><i class="fa-solid fa-user"></i> by admin</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- blog section ends -->
+
+
+
+
+    <!-- swiperjs cdn for script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- script link -->
     <script src="js/script.js"></script>
